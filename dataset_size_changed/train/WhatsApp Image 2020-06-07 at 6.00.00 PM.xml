@@ -1,0 +1,38 @@
+<annotation verified="yes">
+	<folder>dataset_size_changed</folder>
+	<filename>WhatsApp Image 2020-06-07 at 6.00.00 PM.jpeg</filename>
+	<path>D:\PDG\Testing_Object_Detector\dataset_size_changed\training\WhatsApp Image 2020-06-07 at 6.00.00 PM.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1040</width>
+		<height>1040</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>tv</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>5</xmin>
+			<ymin>189</ymin>
+			<xmax>1029</xmax>
+			<ymax>662</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>laptop</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>831</xmin>
+			<ymin>573</ymin>
+			<xmax>1040</xmax>
+			<ymax>1011</ymax>
+		</bndbox>
+	</object>
+</annotation>
