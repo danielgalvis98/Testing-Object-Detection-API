@@ -89,6 +89,14 @@ num_detections = detection_graph.get_tensor_by_name('num_detections:0')
 
 # Open video file
 video = cv2.VideoCapture(PATH_TO_VIDEO)
+(grabbed, frame) = video.read()
+fshape = frame.shape
+fheight = fshape[0]
+fwidth = fshape[1]
+
+# Define the codec and create VideoWriter object
+fourcc = cv2.VideoWriter_fourcc(*'XVID')
+out = cv2.VideoWriter('output.avi',fourcc, 20.0, (fwidth,fheight))
 
 while(video.isOpened()):
 
@@ -116,11 +124,14 @@ while(video.isOpened()):
 
     # All the results have been drawn on the frame, so it's time to display it.
     cv2.imshow('Object detector', frame)
+    # write the frame
+    out.write(frame)
 
     # Press 'q' to quit
     if cv2.waitKey(1) == ord('q'):
         break
 
 # Clean up
+out.release()
 video.release()
 cv2.destroyAllWindows()
