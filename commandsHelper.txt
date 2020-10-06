@@ -2,7 +2,9 @@ python model_main.py --logtostderr --model_dir=training/ --pipeline_config_path=
 
 E:\DATA\Repositories\Testing-Object-Detection-API
 
-CUDNN 7.6.1
+python generate_tfrecord.py --csv_input=dataset_size_changed/train_labels.csv --output_path=train.record --image_dir=dataset_size_changed/train
+
+python generate_tfrecord.py --csv_input=dataset_size_changed/test_labels.csv --output_path=test.record --image_dir=dataset_size_changed/test
 
 python train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/faster_rcnn_inception_v2_pets.config
 
